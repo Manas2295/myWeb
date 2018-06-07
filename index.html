@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h3>Calculator</h3>
+<input id="n1" type="number" placeholder="Enter 1st no.">
+<select id="slt" >
+	<option value="0">+</option>
+	<option value="1">-</option>
+	<option value="2">x</option>
+	<option value="3">/</option>
+</select>
+<input id="n2" type="number" placeholder="Enter 2nd no.">
+
+<button id="btn" onclick="fun()">CLICK</button>
+<h4 id="res"></h4>
+
+<script>
+	
+	function fun(){
+		var a, b;
+		a=parseInt(document.getElementById("n1").value);
+		b=parseInt(document.getElementById("n2").value);
+		var o=parseInt(document.getElementById("slt").value);
+		if(o==0){
+			document.getElementById("res").innerHTML=(a+b);
+		}
+		if(o==1){
+			document.getElementById("res").innerHTML=(a-b);
+		}
+		if(o==2){
+			document.getElementById("res").innerHTML=(a*b);
+		}
+		if(o==3){
+			document.getElementById("res").innerHTML=(a/b);
+		}
+
+	}
+
+</script>
+
+</body>
+</html>
